@@ -10,12 +10,33 @@ local NotificationBindable = Instance.new("BindableFunction")
 NotificationBindable.OnInvoke = callback
 --
 game.StarterGui:SetCore("SendNotification",  {
-	Title = "Weirdo Hub";
-	Text = "Join For More Updates! https://discord.gg/m4StFvkct4 P To Lock!";
-	Icon = "141515251";
+	Title = "Venus";
+	Text = "Venus Streamable Enabled!";
+	Icon = "";
 	Duration = 10;
-	Button1 = "Okay!";
-	Button2 = "No Thanks!";
+	Button1 = "";
+	Button2 = "";
+	Callback = NotificationBindable;
+})
+
+local function callback(Text)
+	if Text == "Button1 text" then
+		print ("Answer")
+	elseif Text == ("Button2 text") then
+		print ("Answer2")
+	end
+end
+
+local NotificationBindable = Instance.new("BindableFunction")
+NotificationBindable.OnInvoke = callback
+--
+game.StarterGui:SetCore("SendNotification",  {
+	Title = "Aimlock";
+	Text = "Q To Lock!";
+	Icon = "";
+	Duration = 5;
+	Button1 = "";
+	Button2 = "";
 	Callback = NotificationBindable;
 })
 
@@ -37,8 +58,8 @@ local CurrentCamera = Workspace.CurrentCamera
 local DaHoodSettings = {
     SilentAim = true,
     AimLock = true,
-    Prediction = 0.165,
-    AimLockKeybind = Enum.KeyCode.P
+    Prediction = 0.500,
+    AimLockKeybind = Enum.KeyCode.Q
 }
 getgenv().DaHoodSettings = DaHoodSettings
 
